@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.hamburger-line {
+  @apply my-2 block h-[2px] w-[30px] bg-dark dark:bg-white;
+}
+
+.navbar-fixed {
+  /* z-untuk action jika discroll dan opacity tembus pandang */
+  @apply fixed z-[9999] bg-white bg-opacity-70 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+  /* karna engga ada di tailwind backdrop kita tulis seperti ini */
+  /* backdrop-filter: blur(5px); dipindahin ke atas karena ada di tailwind */
+  /* membuat garis bening */
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+/* cari pass anaknya span ke 1*/
+.hamburger-active > span:nth-child(1) {
+  /* origin untuk  atas agar turun buka memutar ditengah*/
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  /* tengah menghilang*/
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  /* origin untuk  bawah agar naik buka memutar ditengah*/
+  @apply -rotate-45;
+}
+/* elemen origin dipindahkan ke html agar tidakhilang */
+
+/* untuk mengeser toogle dark */
+/* ~ digunakan untuk mengambil bagian dalamnya */
+#dark-toggle:checked ~ label div.toggle-circle {
+  @apply translate-x-3;
+}
