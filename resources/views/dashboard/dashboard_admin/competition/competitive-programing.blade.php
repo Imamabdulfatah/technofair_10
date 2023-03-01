@@ -55,25 +55,26 @@
             </thead>
             {{-- table 1 --}}
             <tbody>
+                @foreach($postcp as $cp)
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        Universitas Gunadarma
+                        {{ $cp["instansi"] }}
                     </th>
                     <td class="px-6 py-4">
-                        <a class="text-blue-600 text-bold" href="/admin/competition/detail-ctf">Silver</a> 
+                        <a class="text-blue-600 text-bold" href="/admin/detail-ctf/{{ $cp["slug"] }}">{{ $cp["nama_tim"] }}</a> 
                     </td>
                     <td class="px-6 py-4">
-                        Laptop
+                        {{ $cp["ketua"] }}
                     </td>
                     <td class="px-6 py-4">
-                        imam_keren
+                        {{ $cp["id_line"] }}
                     </td>
                     <td class="px-6 py-4">
-                        0898728278
+                        {{ $cp["no_hp"] }}
                     </td>
                     <td class="px-6 py-4">
-                        imamabdul8875@gmail.com
+                        {{ $cp["email"] }}
                     </td>
                     <td class="px-6 py-4">
                         <img src="" alt="Pembayaran">
@@ -83,8 +84,7 @@
                     </td>
                     <td class="px-6 py-4">
                       
-                        <button id="dropdownLeftButton" data-dropdown-toggle="dropdownLeft" data-dropdown-placement="left" class="mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-4 h-4 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Dropdown left</button>
-
+                        <button id="dropdownLeftButton" data-dropdown-toggle="dropdownLeft" data-dropdown-placement="left" class="mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-4 h-4 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Pembayaran</button>
                         <!-- Dropdown menu -->
                         <div id="dropdownLeft" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLeftButton">
@@ -94,14 +94,13 @@
                             <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reject</a>
                             </li>
-                           
                             </ul>
                         </div>
 
                     </td>
                     <td class="px-6 py-4">
                        
-                        <button id="dropdownLeftButton1" data-dropdown-toggle="dropdownLeft1" data-dropdown-placement="left" class="mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-4 h-4 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Dropdown left</button>
+                        <button id="dropdownLeftButton1" data-dropdown-toggle="dropdownLeft1" data-dropdown-placement="left" class="mb-3 md:mb-0 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-2 py-1.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><svg class="w-4 h-4 mr-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>Berkas</button>
 
                         <!-- Dropdown menu -->
                         <div id="dropdownLeft1" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
@@ -112,19 +111,12 @@
                             <li>
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Reject</a>
                             </li>
-                           
                             </ul>
-                        </div>
-
-                       
-                       
-                       
+                        </div>  
                     </td>
                 </tr>
-              
+                @endforeach
             </tbody>
-
-       
         </table>
     </div>
 
@@ -159,23 +151,22 @@
             </thead>
             
             <tbody>
+                @foreach($postcp as $cp)
                 <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <td class="px-6 py-4">
-                        imam_keren
+                        {{ $cp["no"] }}
                     </td>
                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        1
+                        {{ $cp["instansi"] }}
                     </th>
                     <td class="px-6 py-4">
-                        imamabdul
+                        {{ $cp["nama_tim"] }}
                     </td>
                     <td class="px-6 py-4">
-                        <img src="" alt="Pembayaran">
-                    </td>
-                    <td class="px-6 py-4">
-                        <img src="" alt="Berkas">
+                        {{ $cp["status"] }}
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

@@ -1,3 +1,4 @@
+{{-- @dd($detail) --}}
 @extends('layouts.main_dashboard_admin')
 
 @section('container')
@@ -32,17 +33,19 @@
                 </thead>
                 {{-- table 1 --}}
                 <tbody>
+                    @foreach($detail as $dt)
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <td class="px-6 py-4">
-                            imam_keren
+                            {{ $dt["agt_tim"] }}
                         </td>
                         <td class="px-6 py-4">
-                            0898728278
+                           {{ $dt["no_hp"] }}
                         </td>
                         <td class="px-6 py-4">
-                            imamabdul8875@gmail.com
+                           {{ $dt["email" ]}}
                         </td>
                     </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>

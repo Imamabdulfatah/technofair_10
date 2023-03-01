@@ -5,14 +5,8 @@
 <main>
 {{-- Background gambar --}}
 <div id="home" class="relative pt-16 pb-32 flex content-center items-center justify-center" style="min-height: 75vh;">
-    <div
-        class="absolute top-0 w-full h-full bg-center bg-cover"
-        style='background-image: url("/img/asset/smartcity2.png");'
-    >
-        <span
-        id="blackOverlay"
-        class="w-full h-full absolute opacity-75 bg-black"
-        ></span>
+    <div class="absolute top-0 w-full h-full bg-center bg-cover" style='background-image: url("/img/asset/smartcity2.png");'>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-75 bg-black"></span>
     </div>
 
     {{-- isi kata kata --}}
@@ -21,7 +15,7 @@
         <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
             <div class="pr-12">
             <h1 class="text-white font-semibold text-6xl">
-                TECHNO FAIR 10.0
+                {{ $tema }}
             </h1>
             <p class="mt-4 text-2xl text-gray-300">
                 "Getting new ideas then creating something big with your experience and knowledge through the startup world"
@@ -153,12 +147,10 @@
                 ></polygon>
                 </svg>
                 <h4 class="text-xl font-bold text-white">
-                Top Notch Services
+                Ayo mulai langkah Anda
                 </h4>
                 <p class="text-md font-light mt-2 text-white">
-                The Arctic Ocean freezes every winter and much of the
-                sea-ice then thaws every summer, and that process will
-                continue whatever happens.
+                Belajar bersama, bersaing sehat, menambah relasi dan mengembangkan skill dan kemampuan
                 </p>
             </blockquote>
             </div>

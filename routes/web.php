@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\InputAgtController;
+use App\Models\InputAgt;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,16 +16,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Landing Page
 Route::get('/', function () {
     return view('landing-page', [
         "title" => "Landing Page",
+        "tema" => "TECHNO FAIR 10.0"
     ]);
 });
 
-Route::get('/coba', function () {
-    return view('layout/template');
-});
 
+
+// secondary page
 Route::get('/big-data', function () {
     return view('events/webinar/bigData', [
         "title" => "Big Data",
@@ -174,38 +178,24 @@ Route::get('/admin/competition/', function () {
     return view('dashboard/dashboard_admin/competition/capture_flag', [
         "title" => "Capture The Flag",
         "active" => "admin",
+        "posts" => InputAgt::semua(),
     ]);
 });
 
-Route::get('/admin/competitive-programing/', function () {
-    return view('dashboard/dashboard_admin/competition/competitive-programing', [
-        "title" => "Competitive Programing",
-        "active" => "admin",
-    ]);
-});
+Route::get('/admin/competitive-programing/', [InputAgtController::class, 'index']);
 
-Route::get('/admin/competitive-programing/detail', function () {
-    return view('dashboard/dashboard_admin/detail/detail_competition', [
-        "title" => "Detail Competitive Programing",
-        "active" => "admin",
-    ]);
-});
 
-Route::get('/admin/competitive-programing/detail-cp', function () {
-    return view('dashboard/dashboard_admin/detail/detail_competitivePrograming', [
-        "title" => "Detail Competitive Programing",
-        "active" => "admin",
-    ]);
-});
+Route::get('/admin/detail-cp/{slug}', [InputAgtController::class, 'show']);
 
-Route::get('/admin/competition/detail-ctf', function () {
+Route::get('/admin/detail-ctf/{slug}', function ($slug) {
     return view('dashboard/dashboard_admin/detail/detail_ctf', [
-        "title" => "Detail Competitive Programing",
+        "title" => "Detail Anggota Tim CTF",
         "active" => "admin",
+        "detail" => InputAgt::find($slug)
     ]);
 });
 
-
+// Webinar Admin
 Route::get('/admin/data-science/', function () {
     return view('dashboard/dashboard_admin/webinar/data-secience', [
         "title" => "Data Sscience",
@@ -220,6 +210,7 @@ Route::get('/admin/uiux/', function () {
     ]);
 });
 
+// Workshop Admin
 Route::get('/admin/product-design/', function () {
     return view('dashboard/dashboard_admin/workshop/product-design', [
         "title" => "Product Design",

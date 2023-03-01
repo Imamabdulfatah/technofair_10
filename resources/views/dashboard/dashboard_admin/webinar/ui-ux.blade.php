@@ -2,11 +2,11 @@
 
 @section('container')
     <div class="mx-6 mt-8 mb-20">
-        <h1 class="text-3xl text-bold">{{ $title }}</h1>
-        <div class="flex my-4">
+        <h1 class="text-3xl mb-4 text-bold">{{ $title }}</h1>
+        {{-- <div class="flex my-4">
             <button type="button" class="text-blue-700  hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-4 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800">Pending</button>
             <button type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-600 dark:focus:ring-blue-800">All Accounts</button>
-        </div>
+        </div> --}}
         
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <div class="pb-4 bg-white dark:bg-gray-900">
