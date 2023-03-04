@@ -32,9 +32,9 @@
                     </div>
 
                     <div class="px-2">
-                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Pilih Lomba</label>
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Pilih </label>
                        
-                        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="block w-72 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">......</button>
+                        {{-- <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="block w-72 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-blue-400 dark:focus:border-blue-400 focus:ring-blue-400 focus:outline-none focus:ring focus:ring-opacity-40">......</button>
                         <!-- Dropdown menu -->
                         <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
                             <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
@@ -51,7 +51,29 @@
                                 <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">UX Design</a>
                             </li>
                             </ul>
-                        </div>                                       
+                        </div>                                        --}}
+
+                        <div class="relative inline-block text-left">
+                            <div>
+                              <button
+                                id="dropdown-button"
+                                type="button"
+                                class="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-24 py-3.5 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                              >
+                                .......
+                              </button>
+                            </div>
+                            <div id="dropdown-menu" class="hidden absolute z-50 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button" tabindex="-1">
+                              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Competitive Programing</a>
+                              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Capture The Flag</a>
+                              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Product Desain</a>
+                              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Sofware Enginering</a>
+                              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Data Science</a>
+                              <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">UI UX</a>
+                            </div>
+                          </div>
                     </div>
 
                         <div>

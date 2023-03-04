@@ -56,11 +56,11 @@
             >
             <div class="px-2 py-3 flex-auto">
                 <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+                class="text-white p-3 text-center inline-flex items-center justify-center w-24 h-24 mb-3 shadow-lg rounded-full bg-red-400"
                 >
-                <i class="fas fa-award"></i>
+                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-seminar-event-management-flaticons-lineal-color-flat-icons-3.png"/>
                 </div>
-                <h6 class="text-xl font-semibold">Webinar</h6>
+                <h6 class="text-xl font-semibold">{{ $Sm }}</h6>
                     
                 </p>
             </div>
@@ -72,11 +72,11 @@
             >
             <div class="px-2 py-3 flex-auto">
                 <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400"
+                class="text-white p-3 text-center inline-flex items-center justify-center w-24 h-24 mb-3 shadow-lg rounded-full bg-blue-400"
                 >
-                <i class="fas fa-retweet"></i>
+                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-seminar-activism-flaticons-lineal-color-flat-icons-3.png"/>
                 </div>
-                <h6 class="text-xl font-semibold">Workshop</h6>
+                <h6 class="text-xl font-semibold">{{ $Ws }}</h6>
                 
             </div>
             </div>
@@ -87,11 +87,11 @@
             >
             <div class="px-2 py-3 flex-auto">
                 <div
-                class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"
+                class="text-white p-3 text-center inline-flex items-center justify-center w-24 h-24 mb-3 shadow-lg rounded-full bg-green-400"
                 >
-                <i class="fas fa-fingerprint"></i>
+                <img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/null/external-competition-tennis-flaticons-lineal-color-flat-icons-5.png"/>
                 </div>
-                <h6 class="text-xl font-semibold">Competition</h6>
+                <h6 class="text-xl font-semibold">{{ $Ct }}</h6>
                 
                 </p>
             </div>
@@ -262,7 +262,7 @@
         <div class="container">
         <div class="w-full px-4">
         <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="text-dark mb-4 text-3xl font-bold dark:text-white">WEBINAR</h4>
+            <h4 class="text-dark mb-4 text-3xl font-bold dark:text-white">{{ $Sm }}</h4>
             <blockquote class="text-xl italic font-semibold text-gray-700 dark:text-white">
             <p>"Future Technology"</p>
         </blockquote>
@@ -273,8 +273,8 @@
                 <div class="overflow-hidden rounded-md shadow-md">
                     <img src="/img/asset/webinar/big-data2.jpg" alt="Architecture kapal pinisi" width="w-full" />
                 </div>
-                <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Big Data</h3>
-                <p>Webinar ini mengangkat topik Big Data</p>
+                <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Data Science</h3>
+                <p>Sebinar ini mengangkat topik Data Science</p>
                 <a href="/big-data/" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Read more
                         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -285,8 +285,8 @@
                 <div class="overflow-hidden rounded-md shadow-md">
                     <img src="/img/asset/webinar/Smart-City3.jpg" alt="Architecture kapal pinisi" width="w-full" />
                 </div>
-                <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Smart City</h3>
-                <p>Webinar ini mengangkat topik Smart City</p>
+                <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">UI | UX</h3>
+                <p>Webinar ini mengangkat topik UI | UX</p>
                 <a href="/smart-city/" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Read more
                         <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -299,7 +299,7 @@
     <div class="container">
         <div class="w-full px-4 ">
             <div class="mx-auto mb-16 max-w-xl text-center">
-            <h2 class="text-dark mb-4 text-3xl font-bold dark:text-white">WORKSHOP</h2>
+            <h2 class="text-dark mb-4 text-3xl font-bold dark:text-white">{{ $Ws }}</h2>
             <blockquote class="text-xl italic font-semibold text-gray-600 dark:text-white">
                 <p>"Learn New Things"</p>
             </blockquote>
@@ -311,8 +311,8 @@
             <div class="overflow-hidden rounded-md shadow-md">
                 <img src="/img/asset/workshop/Digital-marketing.jpg" alt="Architecture kapal pinisi" width="w-full" />
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Digital Marketing</h3>
-            <p>Workshop ini membahas materi perkenalan dasar digital marketing, SEO dan SEM...</p>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Product Design</h3>
+            <p>Workshop ini membahas materi bagaimana produc design bisa membuat produk bisa diterima oleh pengguna, melainkan juga bagaimana produk bisa memberi ruang keuntungan bagi perusahaan</p>
             <a href="/digital-marketing/" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Read more
                 <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -323,8 +323,8 @@
             <div class="overflow-hidden rounded-md shadow-md">
                 <img src="/img/asset/workshop/ui-design2.png" alt="Architecture pola" width="w-full" />
             </div>
-            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">UI Design</h3>
-            <p>Workshop ini memberikan pelatihan peserta dalam merancang UI dengan Figma...</p>
+            <h3 class="mt-5 mb-3 text-xl font-semibold text-dark dark:text-white">Software Engineering</h3>
+            <p>Workshop ini memberikan pelatihan untuk belajar menerapkan prinsip-prinsip rekayasa perangkat lunak untuk desain, pengembangan, pemeliharaan, pengujian, dan evaluasi dari perangkat lunak.</p>
             <a href="/uidesign/" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                 Read more
                 <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -336,7 +336,7 @@
     {{-- Competition --}}
     <div class="w-full px-4">
         <div class="mx-auto mb-16 max-w-xl text-center">
-            <h4 class="text-dark mb-4 text-3xl font-bold dark:text-white">COMPETITION</h4>
+            <h4 class="text-dark mb-4 text-3xl font-bold dark:text-white">{{ $Ct }}</h4>
             <blockquote class="text-xl italic font-semibold text-gray-600 dark:text-white">
                 <p>"Victory Is Not The Main Things"</p>
             </blockquote>
@@ -344,37 +344,7 @@
     </div>
 
     <div class="flex w-full flex-wrap justify-evenly px-2 xl:mx-auto xl:w-10/12">
-        <div class="max-w-xs my-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="/infografic/">
-                <img class="rounded-t-lg" src="/img/asset/competition/infografic2.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="/infografic/">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Infografic</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kompetisi membuat poster yang mengandung pesan dengan tema yang disediakan</p>
-                <a href="/infografic/" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Read more
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-        <div class="max-w-xs my-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="/smart-fikti/">
-                <img class="rounded-t-lg" src="/img/asset/competition/cerdas-cermat2.jpg" alt="" />
-            </a>
-            <div class="p-5">
-                <a href="/smart-fikti/">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Smart FIKTI</h5>
-                </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kompetisi cerdas cermat tanya jawab dengan tema pengetahuan umum teknologi</p>
-                <a href="/smart-fikti/" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                    Read more
-                    <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                </a>
-            </div>
-        </div>
-        <div class="max-w-xs my-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+        <div class="max-w-lg my-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="/capture-flag/">
                 <img class="rounded-t-lg" src="/img/asset/competition/cyber-scurity2.jpg" alt="" />
             </a>
@@ -382,22 +352,22 @@
                 <a href="/capture-flag/">
                     <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Capture The Flag</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kompetisi keamanan jaringan dan informasi seperti mencari script yang telah disembunyikan</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kompetisi keamanan jaringan dan informasi seperti mencari script yang telah disembunyikan.Atau suatu kompetisi hacking yang dimana mengharuskan seorang ataupun tim untuk mengambil sebuah file/string yang sudah disembunyikan sistem yang biasa</p>
                 <a href="/capture-flag/" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Read more
                     <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                 </a>
             </div>
         </div>
-        <div class="max-w-xs my-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="/uxdesign/">
-                <img class="rounded-t-lg" src="/img/asset/competition/ux-design2.png" alt="" />
+        <div class="max-w-lg my-12 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+            <a href="/competitive-programing">
+                <img class="rounded-t-lg" src="/img/asset/competition/ux-design2.png" alt="Competitive Programing" />
             </a>
             <div class="p-5">
                 <a href="/uxdesign/">
-                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">UX Design</h5>
+                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Competitive Programing</h5>
                 </a>
-                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kompetisi desain interaksi produk dengan keramahan dan kenyamanan pada pengguna</p>
+                <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Kompetisi olah pikiran yang diadakan menggunakan internet atau jaringan lokal, di mana para peserta mencoba untuk memprogram sesuai dengan spesifikasi yang diminta, dalam waktu yang terbatas. </p>
                 <a href="/uxdesign/" class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                     Read more
                     <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
@@ -448,7 +418,7 @@
             <button id="wbschedule" class="text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-full text-2xl px-12 py-3 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 mr-2 mb-2">Webinar</button>
 
             
-            <button id="cpschedule" class="text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-full text-2xl px-12 py-3 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 mr-2 mb-2">Competition</button>      
+            <button id="cpschedule" class="text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-full text-2xl px-12 py-3 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 mr-2 mb-2">{{ $Ct }}</button>      
             
             
             <button id="wkschedule" class="text-white bg-[#FF9119] hover:bg-[#FF9119]/80 focus:ring-4 focus:outline-none focus:ring-[#FF9119]/50 font-medium rounded-full text-2xl px-12 py-3 text-center inline-flex items-center dark:hover:bg-[#FF9119]/80 dark:focus:ring-[#FF9119]/40 mr-2 mb-2">Workshop</button>
@@ -497,7 +467,7 @@
                             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                         </div>
                         <div class="mt-3 sm:pr-8">
-                            <h2 class="text-2xl mb-2 font-bold text-slate-200 dark:text-white">Capture The Flage | Competition</h2>
+                            <h2 class="text-2xl mb-2 font-bold text-slate-200 dark:text-white">Capture The Flage | {{ $Ct }}</h2>
                             <time class="block mb-2 text-lg font-normal leading-none text-gray-100 dark:text-gray-500">28 Juni 2022 | 13.00 - 16.00</time>
                             <p class="text-base font-normal text-gray-100 dark:text-gray-400">"Data is new Oil"</p>
                             <hr class="h-px my-2 bg-white border-0 dark:bg-gray-700">
@@ -513,7 +483,7 @@
                             <div class="hidden sm:flex w-full bg-gray-200 h-0.5 dark:bg-gray-700"></div>
                         </div>
                         <div class="mt-3 sm:pr-8">
-                            <h2 class="text-2xl mb-2 font-bold text-slate-200 dark:text-white">Competitive Programing | Competition</h2>
+                            <h2 class="text-2xl mb-2 font-bold text-slate-200 dark:text-white">Competitive Programing | {{ $Ct }}</h2>
                             <time class="block mb-2 text-lg font-normal leading-none text-gray-100 dark:text-gray-500">30 Juni 2022 | 14.00 - 17.00</time>
                             <p class="text-base font-normal text-gray-100 dark:text-gray-400">"Design Is important"</p>
                             <hr class="h-px my-2 bg-white border-0 dark:bg-gray-700">
@@ -834,57 +804,56 @@
             class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-gray-300"
             >
             <div class="flex-auto p-5 lg:p-10">
-                <h4 class="text-2xl font-semibold">Silahkan Beri Penilaian ?</h4>
-                <div class="relative w-full mb-3 mt-8">
-                <label
-                    class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                    for="full-name"
-                    >Full Name</label
-                ><input
-                    type="text"
-                    class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                    placeholder="Full Name"
-                    style="transition: all 0.15s ease 0s;"
-                />
-                </div>
-                <div class="relative w-full mb-3">
-                <label
-                    class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                    for="email"
-                    >Email</label
-                ><input
-                    type="email"
-                    class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                    placeholder="Email"
-                    style="transition: all 0.15s ease 0s;"
-                />
-                </div>
-                <div class="relative w-full mb-3">
-                <label
-                    class="block uppercase text-gray-700 text-xs font-bold mb-2"
-                    for="message"
-                    >Saran Atau Komentar</label
-                ><textarea
-                    rows="4"
-                    cols="80"
-                    class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full"
-                    placeholder="Type a message..."
-                ></textarea>
-                </div>
-                <label for="slider" class="my-2 text-xl text-bold">Silahkan Beri penilaian [Dengan Mengeser slider] :</label>
-                <input id="large-range" type="range" min="1" max="10" value="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700">
 
-              
-                <p class=" text-xl text-bold ml-42">Nilai : <span id="value">1</span></p>
+                <div id="alert" class="my-alert d-none flex p-4 mb-4 text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
+                    <svg aria-hidden="true" class="flex-shrink-0 w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
+                    <span class="sr-only">Info</span>
+                    <div class="ml-3 text-sm font-medium">
+                      Terimaksih Saran Atau Komentar Anda sudah diterima ✔
+                    </div>
+                    <button type="button" class="ml-auto -mx-1.5 -my-1.5 bg-green-50 text-green-500 rounded-lg focus:ring-2 focus:ring-green-400 p-1.5 hover:bg-green-200 inline-flex h-8 w-8 dark:bg-gray-800 dark:text-green-400 dark:hover:bg-gray-700" data-dismiss-target="#alert" aria-label="Close">
+                      <span class="sr-only">Close</span>
+                      <svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                  </div>
 
-                <button
-                    class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 mt-4"
-                    type="button"
-                    style="transition: all 0.15s ease 0s;"
-                >
-                    Send Message
-                </button>
-                </div>
+                <form name='evaluation-web-form'>
+                    <h4 class="text-2xl font-semibold">Silahkan Beri Penilaian ?</h4>
+                    <div class="relative w-full mb-3 mt-8">
+                        <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="full-name">Full Name</label>
+                        <input type="text" name="nama" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Full Name" style="transition: all 0.15s ease 0s;"/>
+                    </div>
+                    <div class="relative w-full mb-3">
+                        <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="email">Email</label>
+                        <input type="email" name="email" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Email" style="transition: all 0.15s ease 0s;"/>
+                    </div>
+                    <div class="relative w-full mb-3">
+                        <label class="block uppercase text-gray-700 text-xs font-bold mb-2" for="message">Saran Atau Komentar</label>
+                        <textarea name="pesan" rows="4" cols="80" class="border-0 px-3 py-3 placeholder-gray-400 text-gray-700 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full" placeholder="Type a message..."></textarea>
+                    </div>
+                    <div>
+                        <label for="slider" class="my-2 text-xl text-bold">Silahkan Beri penilaian [Dengan Mengeser slider] :</label>
+                        <input name="penilaian" id="large-range" type="range" min="1" max="10" value="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700">
+            
+                        <p class=" text-xl text-bold ml-42">Nilai : <span id="value">1</span></p>
+
+                        <button
+                            class="btn-kirim bg-white text-black active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded-lg shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 mt-4"
+                            type="submit"
+                            style="transition: all 0.15s ease 0s;"
+                        >
+                            Send Message
+                        </button>
+                        <button disabled type="button" class="btn-loading d-none py-2.5 px-5 mr-2 text-sm font-medium text-gray-900 bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 inline-flex items-center">
+                            <svg aria-hidden="true" role="status" class="inline w-4 h-4 mr-3 text-gray-200 animate-spin dark:text-gray-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="#1C64F2"/>
+                            </svg>
+                            Loading...
+                        </button>
+                    </div>
+                </form>
+                
             </div>
             </div>
         </div>

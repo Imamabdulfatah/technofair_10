@@ -172,7 +172,7 @@
     </div>
 </div>
 
-<script>
+{{-- <script>
     const btnAll = document.getElementById("all");
     const btnPending = document.getElementById("pending");
     const boxPending = document.getElementById("table1");
@@ -194,5 +194,5 @@ btnPending.addEventListener("click", function () {
     boxAll.style.display = "none";
     boxPending.style.display = "block";
 });
-</script>
+</script> --}}
 @endSection

@@ -1,4 +1,3 @@
-
 @extends('layouts.main_dashboard_admin')
 
 @section('container')
@@ -179,28 +178,5 @@
     </div>
 </div>
 
-<script>
-    const btnAll = document.getElementById("all");
-    const btnPending = document.getElementById("pending");
-    const boxPending = document.getElementById("table1");
-    const boxAll = document.getElementById("table2");
 
-        // Tampilkan box 1, sembunyikan box 2 dan 3
-    boxPending.style.display = "block";
-    boxAll.style.display = "none";
-
-
-    // Tambahkan event listener pada setiap tombol
-    btnAll.addEventListener("click", function () {
-        boxAll.style.display = "block";
-        boxPending.style.display = "none";
-        
-    });
-
-    btnPending.addEventListener("click", function () {
-        boxAll.style.display = "none";
-        boxPending.style.display = "block";
-    });
-</script>
-    
 @endSection

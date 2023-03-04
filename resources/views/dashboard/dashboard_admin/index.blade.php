@@ -78,28 +78,47 @@
      
     <div class="flex mt-8 items-center place-content-stretch ">
         <div class="w-1/2  mx-14 p-6 bg-green-500 border border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700">
-            <a href="#">
-                <h1 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-gray-900">Status Pendaftaran</h1>
-            </a>
-            <button type="button" class="text-white bg-purple-700 hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-purple-300 font-medium rounded-full text-2xl sm:text-xl px-6 py-3 text-center dark:bg-purple-600 dark:hover:bg-purple-700 dark:focus:ring-purple-900">Open Registrasi</button>
-            <hr class="h-px my-4 bg-gray-900 border-0 dark:bg-gray-700">
-            <button id="dropdownDefaultButton3" data-dropdown-toggle="dropdown3" class="text-gray-900 bg-gray-100 hover:bg-gray-400 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">Pilih Status Pendaftaran<svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg></button>
-            <!-- Dropdown menu -->
-            <div id="dropdown3" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefaultButton3">
-                <li>
-                    <p class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Open Registrasi</p>
-                </li>
-                <li>
-                    <p class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Close Registrasi</p>
-                </li>
-                <li>
-                    <p class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Pengumumman Finalis</p>
-                </li>
-               
-                </ul>
+            <h1 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-gray-900">Status Pendaftaran</h1>
+            <div class="mt-4">
+                <div class="w-full bg-gray-200 p-4 rounded-md" id="open-box">
+                Status - Open Registrasi
+                </div>
+            
+                <div class="w-full bg-gray-200 p-4 rounded-md hidden" id="close-box">
+                Status - Close Registrasi
+                </div>
+            
+                <div class="w-full bg-gray-200 p-4 rounded-md hidden" id="announcement-box">
+                Status - Pengumuman
+                </div> 
             </div>
+            <hr class="h-px my-8 bg-white border-0 dark:bg-gray-700">
+            <div class="flex mt-4">
+                <div class="relative">
+                    <button type="button" class="inline-flex justify-center items-center px-4 py-2 border border-gray-300 shadow-sm rounded-md bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="status-button" aria-haspopup="true" aria-expanded="false">
+                        <span>Status Pendaftaran</span>
+                        <svg class="w-4 h-4 ml-2" aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </button>
+            
+                <div class="origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden" id="status-menu">
+                    <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="status-button">
+                    <button type="button" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem" data-status="open">Open Registrasi</button>
+                    <button type="button" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem" data-status="close">Close Registrasi</button>
+                     <button type="button" class="w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900 focus:outline-none focus:bg-gray-100 focus:text-gray-900" role="menuitem" data-status="announcement">Pengumuman</button> 
+                    </div>
+                </div>
+
+              
+                </div>
+
+               
+            </div>
+            
+           
+  
+
         </div>
+
         <div class="w-2/5 mx-6 p-6 bg-yellow-500 border border-gray-200 rounded-3xl shadow dark:bg-gray-800 dark:border-gray-700">
             <a href="#">
                 <h1 class="mb-2 text-2xl font-bold tracking-tight text-white dark:text-gray-900">Eksport Excel</h1>

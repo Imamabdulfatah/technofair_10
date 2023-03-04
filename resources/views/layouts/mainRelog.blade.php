@@ -44,6 +44,22 @@
         document.getElementById(collapseID).classList.toggle("hidden");
         document.getElementById(collapseID).classList.toggle("block");
       }
+
+      const button = document.getElementById('dropdown-button');
+      const menu = document.getElementById('dropdown-menu');
+
+      button.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        button.setAttribute('aria-expanded', menu.classList.contains('hidden') ? 'false' : 'true');
+      });
+
+      menu.querySelectorAll('a').forEach((option) => {
+        option.addEventListener('click', () => {
+          button.innerText = option.innerText;
+          menu.classList.add('hidden');
+          button.setAttribute('aria-expanded', 'false');
+        });
+      });
     </script>
 
     {{-- <script src="../path/to/flowbite/dist/flowbite.min.js"></script> --}}

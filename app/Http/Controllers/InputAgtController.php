@@ -26,4 +26,13 @@ class InputAgtController extends Controller
             "detail" => InputAgt::find($slug)
         ]);
     }
+
+    public function showCp($slug)
+    {
+        return view('dashboard/dashboard_admin/detail/detail_ctf', [
+            "title" => "Detail Anggota Tim CTF",
+            "active" => "admin",
+            "detail" => InputAgt::find($slug)
+        ]);
+    }
 }

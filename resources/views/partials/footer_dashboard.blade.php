@@ -65,39 +65,8 @@
 <!-- end cards -->
 </main>
 
+
+<script src="/js/form.js"></script>
+
 <!-- JavaScript untuk menampilkan form ketika tombol diklik -->
-<script>
-    const btnShowForm = document.getElementById('btn-show-form');
-    const btnCloseForm = document.getElementById('btn-close-form');
-    const formPendaftaran = document.getElementById('form-pendaftaran');
-    const btnShowAg = document.getElementById('btn-show-ag');
-    const btnCloseAg = document.getElementById('btn-close-ag');
-    const formAg= document.getElementById('form-pendaftaran-ag');
-  
 
-    
-
-    // Menampilkan form ketika tombol di klik
-    btnShowForm.addEventListener('click', () => {
-      formPendaftaran.classList.remove('hidden');
-    });
-  
-    // Menyembunyikan form ketika tombol di klik
-    btnCloseForm.addEventListener('click', () => {
-      formPendaftaran.classList.add('hidden');
-    });
-
-     // Menampilkan form ketika tombol di klik
-     btnShowAg.addEventListener('click', () => {
-      formAg.classList.remove('hidden');
-    });
-  
-    // Menyembunyikan form ketika tombol di klik
-    btnCloseAg.addEventListener('click', () => {
-      formAg.classList.add('hidden');
-    });
-
-
-    
-
-  </script>

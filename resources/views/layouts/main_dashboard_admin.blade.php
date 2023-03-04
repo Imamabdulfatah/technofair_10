@@ -35,9 +35,13 @@
 </head>
 
 <body class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500">
-   @include('partials/sidebar_admin')
+    @include('partials/sidebar_admin')
         @yield('container')
     @include('partials/footer_dashboard')
+    
+    <script src="/js/admindom.js"></script>
+    <script src="/js/pending.js"></script>
+   
 </body>
 {{-- flowbite --}}
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>

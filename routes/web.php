@@ -20,52 +20,48 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('landing-page', [
         "title" => "Landing Page",
-        "tema" => "TECHNO FAIR 10.0"
+        "tema" => "TECHNO FAIR 10.0",
+        "Sm" => "Seminar",
+        "Ct" => "Competition",
+        "Ws" => "Workshop"
     ]);
 });
 
 
 
 // secondary page
-Route::get('/big-data', function () {
-    return view('events/webinar/bigData', [
-        "title" => "Big Data",
+Route::get('/data-science', function () {
+    return view('events/webinar/dataScience', [
+        "title" => "Data Science",
         "active" => "bigdata",
     ]);
 });
 
-Route::get('/smart-city', function () {
-    return view('events/webinar/smartCity', [
-        "title" => "Smart City",
+Route::get('/ui-ux', function () {
+    return view('events/webinar/uiux', [
+        "title" => "UI UX",
         "active" => "smartcity",
     ]);
 });
 
-Route::get('/digital-marketing', function () {
-    return view('events/workshop/digitalMarketing', [
-        "title" => "Digital Marketing",
+Route::get('/product-design', function () {
+    return view('events/workshop/productDesign', [
+        "title" => "Product Design",
         "active" => "digital-marketing",
     ]);
 });
 
-Route::get('/uidesign', function () {
-    return view('events/workshop/uiDesign', [
-        "title" => "UI Design",
+Route::get('/sofware-enginnering', function () {
+    return view('events/workshop/sofwareEnginner', [
+        "title" => "Sofware Enginnering",
         "active" => "ui-design",
     ]);
 });
 
-Route::get('/infografic', function () {
-    return view('events/competition/infoGraphic', [
-        "title" => "Infografic",
+Route::get('/competitive-programing', function () {
+    return view('events/competition/competitivePrograming', [
+        "title" => "Competitive Programing",
         "active" => "infografic",
-    ]);
-});
-
-Route::get('/smart-fikti', function () {
-    return view('events/competition/smartFikti', [
-        "title" => "Smart City",
-        "active" => "smartcity",
     ]);
 });
 
@@ -73,13 +69,6 @@ Route::get('/capture-flag', function () {
     return view('events/competition/captureFlag', [
         "title" => "Capture The Flag",
         "active" => "bigdata",
-    ]);
-});
-
-Route::get('/uxdesign', function () {
-    return view('events/competition/uxDesign', [
-        "title" => "UX Design",
-        "active" => "ux-design",
     ]);
 });
 
@@ -94,8 +83,29 @@ Route::get('/login', function () {
 });
 
 Route::get('/register', function () {
-    return view('register', [
+    return view('register/index', [
         "title" => "register",
+        "active" => "register",
+    ]);
+});
+
+Route::get('/register/seminar', function () {
+    return view('register/regisSeminar', [
+        "title" => "Registrasion Seminar",
+        "active" => "register",
+    ]);
+});
+
+Route::get('/register/competiton', function () {
+    return view('register/regisCompetition', [
+        "title" => "Registration Competiton",
+        "active" => "register",
+    ]);
+});
+
+Route::get('/register/workshop', function () {
+    return view('register/regisWorkshop', [
+        "title" => "registration Workshop",
         "active" => "register",
     ]);
 });
@@ -160,7 +170,7 @@ Route::get('/dashboard/profile', function () {
 
 Route::get('/dashboard/virtual-reality', function () {
     return view('dashboard/virtual-reality', [
-        "title" => "Virtual reality",
+        "title" => "Pengumumman Finalis",
         "active" => "dashboard",
     ]);
 });
@@ -187,13 +197,7 @@ Route::get('/admin/competitive-programing/', [InputAgtController::class, 'index'
 
 Route::get('/admin/detail-cp/{slug}', [InputAgtController::class, 'show']);
 
-Route::get('/admin/detail-ctf/{slug}', function ($slug) {
-    return view('dashboard/dashboard_admin/detail/detail_ctf', [
-        "title" => "Detail Anggota Tim CTF",
-        "active" => "admin",
-        "detail" => InputAgt::find($slug)
-    ]);
-});
+Route::get('/admin/detail-ctf/{slug}', [InputAgtController::class, 'showCp']);
 
 // Webinar Admin
 Route::get('/admin/data-science/', function () {
@@ -220,7 +224,7 @@ Route::get('/admin/product-design/', function () {
 
 Route::get('/admin/sofware-enginer/', function () {
     return view('dashboard/dashboard_admin/workshop/sofware-engineer', [
-        "title" => "Competitive Programing",
+        "title" => "Sofware Enginer",
         "active" => "admin",
     ]);
 });
