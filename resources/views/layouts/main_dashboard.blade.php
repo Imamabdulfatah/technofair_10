@@ -1,59 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-        rel="apple-touch-icon"
-        sizes="76x76"
-        href="/img/logo/logo.png"
-    />
-    <link rel="icon" type="image/png" href="/img/logo/logo.png" />
-    <title>Technofair | {{ $title }}</title>
-    <!--     Fonts and icons     -->
-    <link
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700"
-        rel="stylesheet"
-    />
-    <!-- Font Awesome Icons -->
-    <script
-        src="https://kit.fontawesome.com/42d5adcbca.js"
-        crossorigin="anonymous"
-    ></script>
-    <!-- Nucleo Icons -->
-    <link href="/css_dashboard/nucleo-icons.css" rel="stylesheet" />
-    <link href="/css_dashboard/nucleo-svg.css" rel="stylesheet" />
-    <!-- Popper -->
-    <script src="https://unpkg.com/@popperjs/core@2"></script>
-    <!-- Main Styling -->
-    <link
-        href="/css_dashboard/soft-ui-dashboard-tailwind.css?v=1.0.4"
-        rel="stylesheet"
-    />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ $title }}</title>
+    
+    <link rel="shortcut icon" href="/asset/logo_t.png" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/assets/vendors/perfect-scrollbar/perfect-scrollbar.css" />
+    <link rel="stylesheet" href="/assets/css/app.css" />
+    <link rel="stylesheet" href="/assets/vendors/chartjs/Chart.min.css" />
+    <link rel="stylesheet" href="/assets/vendors/quill/quill.snow.css" />
+    <link rel="stylesheet" href="/assets/vendors/quill/quill.bubble.css" />
 
-    @vite('resources/css/app.css')
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    
 </head>
+<body>
+    @if ($sidebar === "sidebar")
+        @include('partials.sidebar')
+    @else
+        @include('partials.sidebar_admin')
+    @endif
+  
 
-<body class="m-0 font-sans antialiased font-normal text-base leading-default bg-gray-50 text-slate-500">
-   @include('partials/sidebar')
-        @yield('container')
-    @include('partials/footer_dashboard')
+    @yield('container')
+
+    @include('partials.footer_dashboard')
+
+    <script src="/assets/js/feather-icons/feather.min.js"></script>
+    <script src="/assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/vendors/chartjs/Chart.min.js"></script>
+    <script src="/assets/vendors/apexcharts/apexcharts.min.js"></script>
+    <script src="/assets/js/pages/dashboard.js"></script>
+    <script src="/assets/js/main.js"></script>
+
+    <script src="/assets/vendors/quill/quill.min.js"></script>
+    <script src="/assets/js/pages/form-editor.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="js/script_dashboard.js"></script>
+    <script src="js/label.js"></script>
+    
 </body>
-
-<script src="/js/script_db.js"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
-{{-- icon awesome --}}
-<script src="https://kit.fontawesome.com/46b612ab28.js" crossorigin="anonymous"></script>
-<!-- plugin for charts  -->
-<script src="/js_dashboard/plugins/chartjs.min.js" async></script>
-<!-- plugin for scrollbar  -->
-<script src="/js_dashboard/plugins/perfect-scrollbar.min.js" async></script>
-<!-- github button -->
-<script async defer src="https://buttons.github.io/buttons.js"></script>
-<!-- main script file  -->
-<script
-    src="/js_dashboard/soft-ui-dashboard-tailwind.js?v=1.0.4"
-    async
-></script>
 </html>

@@ -1,9 +1,19 @@
 <?php
 
-use App\Http\Controllers\InputAgtController;
-use App\Models\InputAgt;
-use Illuminate\Support\Facades\Route;
+// use App\Models\InputData;
 
+use App\Models\Register;
+use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\EventController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\KonfirmasiController;
+use App\Http\Controllers\DashboardCrudController;
+use App\Http\Controllers\DashboardPostController;
+use App\Http\Controllers\DashboardTambahController;
+use App\Http\Controllers\VerifikasiEmailController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,213 +28,82 @@ use Illuminate\Support\Facades\Route;
 
 // Landing Page
 Route::get('/', function () {
-    return view('landing-page', [
+    return view('index', [
         "title" => "Landing Page",
+        "navbar" => "index",
         "tema" => "TECHNO FAIR 10.0",
         "Sm" => "Seminar",
         "Ct" => "Competition",
-        "Ws" => "Workshop"
+        "Ws" => "Workshop",
+        "active" => "mainpage"
     ]);
 });
-
 
 
 // secondary page
-Route::get('/data-science', function () {
-    return view('events/webinar/dataScience', [
-        "title" => "Data Science",
-        "active" => "bigdata",
-    ]);
-});
+Route::get('/internet-of-things',[EventController::class, 'satu']);
 
-Route::get('/ui-ux', function () {
-    return view('events/webinar/uiux', [
-        "title" => "UI UX",
-        "active" => "smartcity",
-    ]);
-});
+Route::get('/ui-ux', [EventController::class, 'dua']);
 
-Route::get('/product-design', function () {
-    return view('events/workshop/productDesign', [
-        "title" => "Product Design",
-        "active" => "digital-marketing",
-    ]);
-});
+Route::get('/product-design', [EventController::class, 'tiga']);
 
-Route::get('/sofware-enginnering', function () {
-    return view('events/workshop/sofwareEnginner', [
-        "title" => "Sofware Enginnering",
-        "active" => "ui-design",
-    ]);
-});
+Route::get('/sofware-enginnering',[EventController::class, 'empat']);
 
-Route::get('/competitive-programing', function () {
-    return view('events/competition/competitivePrograming', [
-        "title" => "Competitive Programing",
-        "active" => "infografic",
-    ]);
-});
+Route::get('/competitive-programing', [EventController::class, 'lima']);
 
-Route::get('/capture-flag', function () {
-    return view('events/competition/captureFlag', [
-        "title" => "Capture The Flag",
-        "active" => "bigdata",
-    ]);
-});
+Route::get('/capture-flag',[EventController::class, 'enam']);
+
+// Login Registration
+Route::get('/option',[RegisterController::class, 'option']);
+Route::get('/login',[LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login',[LoginController::class, 'authenticate']);
+Route::post('/logout',[LoginController::class, 'logout'])->middleware('auth');
+
+Route::get('/registration/workshop',[RegisterController::class, 'workshop'])->middleware('guest');
+Route::get('/registration/seminar',[RegisterController::class, 'seminar'])->middleware('guest');
+Route::get('/registration/competition',[RegisterController::class, 'index'])->middleware('guest');
+Route::post('/registration',[RegisterController::class, 'store'])->name('registration');
 
 
-// login register
-
-Route::get('/login', function () {
-    return view('login', [
-        "title" => "Login",
-        "active" => "login",
-    ]);
-});
-
-Route::get('/register', function () {
-    return view('register/index', [
-        "title" => "register",
-        "active" => "register",
-    ]);
-});
-
-Route::get('/register/seminar', function () {
-    return view('register/regisSeminar', [
-        "title" => "Registrasion Seminar",
-        "active" => "register",
-    ]);
-});
-
-Route::get('/register/competiton', function () {
-    return view('register/regisCompetition', [
-        "title" => "Registration Competiton",
-        "active" => "register",
-    ]);
-});
-
-Route::get('/register/workshop', function () {
-    return view('register/regisWorkshop', [
-        "title" => "registration Workshop",
-        "active" => "register",
-    ]);
-});
-
-Route::get('/reset-password', function () {
-    return view('resetPassword', [
-        "title" => " Reset Password",
-        "active" => "reset password",
-    ]);
-});
-
-
-// Dashboard 
-Route::get('/dashboard', function () {
-    return view('dashboard/index', [
+// Dashboard User
+Route::get('/dashboard', function(){
+    return view('dashboard/user/index', [
         "title" => "Dashboard",
         "active" => "dashboard",
+        "sidebar" => "sidebar",
+        "img" => "img/internet/welcome.jpg",
+        "openclose" => Register::all(),
     ]);
-});
+})->middleware('auth');
 
-Route::get('/dashboard/template', function () {
-    return view('dashboard/template', [
-        "title" => "Dashboard",
-        "active" => "dashboard",
-    ]);
-});
+Route::get('/dashboard/detail', [DashboardCrudController::class, 'detail'])->middleware('auth');
+Route::get('/dashboard/data-peserta', [DashboardTambahController::class, 'index'])->middleware('auth');
+Route::get('/dashboard/data-peserta/tambah-data', [DashboardTambahController::class, 'create'])->middleware('auth');
+Route::post('/dashboard/data-peserta/tambah-data/sukses', [DashboardTambahController::class, 'store'])->middleware('auth');
 
-Route::get('/dashboard-main', function () {
-    return view('dashboard/dashboard', [
-        "title" => "Dashboard main",
-        "active" => "dashboard",
-    ]);
-});
+// Route::resource('/dashboard/data-peserta/', DashboardPostController::class)->middleware('auth');
 
-Route::get('/dashboard/tables', function () {
-    return view('dashboard/tim', [
-        "title" => "Tables",
-        "active" => "dashboard",
-    ]);
-});
+Route::delete('/dashboard/data-peserta/hapus/{id}', [DashboardCrudController::class, 'delete'])->middleware('auth')->name('crud.delete');
+Route::get('/dashboard/data-peserta/edit/bxiuedhux37dx7x73/{id}', [DashboardCrudController::class, 'edit'])->name('crud.update')->middleware('auth');
+Route::patch('/dashboard/data-peserta/edit/bxiuedhux37dx7x73/{id}', [DashboardCrudController::class, 'update'])->middleware('auth');
 
-Route::get('/dashboard/billing', function () {
-    return view('dashboard/pembayaran', [
-        "title" => "Billing",
-        "active" => "dashboard",
-    ]);
-});
+Route::get('/dashboard/berkas-peserta/',[KonfirmasiController::class, 'berkas'])->middleware('auth');
+Route::post('/dashboard/berkas-peserta/',[KonfirmasiController::class, 'uploadBerkas'])->name('upload.berkas')->middleware('auth');
 
-Route::get('/dashboard/document', function () {
-    return view('dashboard/berkas', [
-        "title" => "Berkas",
-        "active" => "dashboard",
-    ]);
-});
+// Dashboard Admin
 
-Route::get('/dashboard/profile', function () {
-    return view('dashboard/profile', [
-        "title" => "Profile",
-        "active" => "dashboard",
-    ]);
-});
-
-Route::get('/dashboard/virtual-reality', function () {
-    return view('dashboard/virtual-reality', [
-        "title" => "Pengumumman Finalis",
-        "active" => "dashboard",
-    ]);
-});
+Route::get('/admin', [AdminController::class, 'index'])->middleware('admin');
+Route::put('/admin/{id}', [AdminController::class, 'update'])->name('status.update')->middleware('admin');
+Route::get('/admin/data-capture-flag', [AdminController::class, 'captureFlag'])->middleware('admin');
+Route::get('/admin/data-competitive-programing', [AdminController::class, 'competitiveProgramming'])->middleware('admin');
+Route::get('/admin/data-peserta-data-science', [AdminController::class, 'dataScience'])->middleware('admin');
+Route::get('/admin/data-ui-ux', [AdminController::class, 'uiux'])->middleware('admin');
+Route::get('/admin/data-sofware-engineering', [AdminController::class, 'sofwareEginnering'])->middleware('admin');
+Route::get('/admin/data-product-design', [AdminController::class, 'productDesign'])->middleware('admin');
 
 
-// dashboard Admin
-Route::get('/admin', function () {
-    return view('dashboard/dashboard_admin/index', [
-        "title" => "Admin",
-        "active" => "admin",
-    ]);
-});
+// verifikasi berkas pembayaran
+Route::put('/admin/competition/7686f5frtctrd65fr/{id}', [VerifikasiEmailController::class, 'successCompetition'])->name('successVerifikasi')->middleware('admin');
 
-Route::get('/admin/competition/', function () {
-    return view('dashboard/dashboard_admin/competition/capture_flag', [
-        "title" => "Capture The Flag",
-        "active" => "admin",
-        "posts" => InputAgt::semua(),
-    ]);
-});
+Route::get('/admin/competition/7686f5frtctrd65fr/{id}', [VerifikasiEmailController::class, 'failedCompetition'])->name('failed.verifikasi')->middleware('admin');
 
-Route::get('/admin/competitive-programing/', [InputAgtController::class, 'index']);
-
-
-Route::get('/admin/detail-cp/{slug}', [InputAgtController::class, 'show']);
-
-Route::get('/admin/detail-ctf/{slug}', [InputAgtController::class, 'showCp']);
-
-// Webinar Admin
-Route::get('/admin/data-science/', function () {
-    return view('dashboard/dashboard_admin/webinar/data-secience', [
-        "title" => "Data Sscience",
-        "active" => "admin",
-    ]);
-});
-
-Route::get('/admin/uiux/', function () {
-    return view('dashboard/dashboard_admin/webinar/ui-ux', [
-        "title" => "UI UX",
-        "active" => "admin",
-    ]);
-});
-
-// Workshop Admin
-Route::get('/admin/product-design/', function () {
-    return view('dashboard/dashboard_admin/workshop/product-design', [
-        "title" => "Product Design",
-        "active" => "admin",
-    ]);
-});
-
-Route::get('/admin/sofware-enginer/', function () {
-    return view('dashboard/dashboard_admin/workshop/sofware-engineer', [
-        "title" => "Sofware Enginer",
-        "active" => "admin",
-    ]);
-});
